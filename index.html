@@ -1,7 +1,719 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+<html><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="checkbox.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <style>
+            html {
+                overflow-y: scroll;
+                height: 100%;
+                background-color: #FBFBFB;
+            }
+            body {
+                background-color: #FBFBFB;
+            }
+            .panel-heading span {
+                margin-top: -20px;
+                font-size: 15px;
+            }
+            .panel-body.fixed {
+                overflow-y: scroll;
+                min-height: 50px;
+                max-height: 120px;
+                padding: 8px;
+            }
+            #hidden {
+                display: none;
+            }
+            .row {
+                margin-top: 40px;
+                padding: 0 10px;
+            }
+            .clickable {
+                cursor: pointer;
+                padding-top: 20px;
+            }
+            .type-get {
+                width: 64px;
+                height: 32px;
+                border-radius: 6px;
+                background-color: green;
+
+                line-height: 32px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                color: white;
+            }
+            .type-post {
+                width: 64px;
+                height: 32px;
+                border-radius: 6px;
+                background-color: #0000EE;
+
+                line-height: 32px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                color: white;
+            }
+            .black-bac {
+                width: 100%;
+                border-radius: 6px;
+                background-color: #0A3A3A;
+
+                line-height: 32px;
+                color: white;
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="col-md-12" style="padding-top: 24px;">
+                <!-- HEADING -->
+            </div>
+
+            <div class="col-md-4">
+                <!-- Search Bar -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">Find an API</div>
+                    <div class="panel-body">
+                        <form action="" method="get">
+                            <div>
+                                <input type="text" class="form-control" name="query" placeholder="API Name"><br>
+                                <input type="submit" class="btn btn-default" value="Find API"><br><br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">Search Results</div>
+                    <div class="panel-body fixed">
+                        <table class="table-condensed table table-striped" style="padding: 0;">
+                            <tbody>
+                                                    </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- All API's -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">All API's</div>
+                    <div class="panel-body fixed">
+                        <table class="table-condensed table table-striped" style="padding: 0;">
+                            <tbody>
+                                                                <tr>
+                                        <td><a href="?api=academicyear"> academicyear </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=analytics"> analytics </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=assignment"> assignment </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=auth"> auth </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=calendar"> calendar </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=classgoal"> classgoal </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=credits"> credits </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=group"> group </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=learninglocker"> learninglocker </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=me"> me </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=news"> news </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=note"> note </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=notification"> notification </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=pinpoint"> pinpoint </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=reporting"> reporting </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=resource"> resource </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=sites"> sites </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=studenttracker"> studenttracker </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=term"> term </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=timetables"> timetables </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=transferwizard"> transferwizard </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=year"> year </a></td>
+                                    </tr>
+                                                                    <tr>
+                                        <td><a href="?api=yeargroup"> yeargroup </a></td>
+                                    </tr>
+                                                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <!-- Go into the api and display all methods found -->
+                                        <!-- Create method panel -->
+                        <div class="panel panel-default">
+                            <!-- Create panel heading -->
+                            <div class="panel-heading">
+                                get                                <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                            </div>
+
+                            <!-- Create panel body -->
+                            <div id="hidden" class="panel-body" style="max-height: 500px; overflow-y: scroll;">
+                                <!-- Displaying title -->
+                                <h3> Get Academic Year/s </h3> <br>
+
+                                <!-- Displaying description -->
+                                <p> </p><p>Either retrieve an academic year, or get all academic years. If a uuid is not specified, all academic years are returned.</p> <p></p> <br>
+
+                                <!-- Displaying GET or POST -->
+                                                                    <div class="type-get"> GET </div>
+                                 <br>
+
+                                <!-- Displaying url on github for method -->
+                                <div class="black-bac" style="padding-left: 8px;"> https://api.github.com/academicyear/get </div> <br>
+
+                                <!-- Adding parameter tables -->
+                                                                    <strong>Parameter</strong>                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Field</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>uuid                                                    </td>
+                                                    <td>Uuid</td>
+                                                    <td><p>Academic year uuid</p></td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                <!-- Displaying examples of method if found -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> PHP : Example usage: </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre> Example </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- Displaying success output -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> Success-Response: JSON </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre style="background-color: #0A1A1A; color: green;"> HTTP/1.1 200 OK
+ {
+     "status": "ok",
+     "response": [
+         {
+             "uuid": "CC99021720075A433F74FF96A02970047F12267C03AE56EF",
+             "name": "2014/2015",
+             "start": "1409526000",
+             "end": "1441580399",
+             "created_on": "1453903001",
+             "created_by": null,
+             "judgement_count": "0",
+             "periods": null
+         }
+     ]
+ } </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- Displaying error output -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> Error-Response: JSON </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre style="background-color: #0A1A1A; color: green;"> HTTP/1.1 500 Generic Error
+{
+     "status": "error",
+     "response": {
+         "message": "FrogOS\\AcademicYear\\InvalidArgumentException - Invalid uuid \"a61e16eec5b111e59912ba0be0483c18\" passed as filter - ref: 56a9dbfe7d98d",
+         "code": "generic-error",
+         "http": 500
+     }
+ } </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                </div>
+                        </div>
+                                            <!-- Create method panel -->
+                        <div class="panel panel-default">
+                            <!-- Create panel heading -->
+                            <div class="panel-heading">
+                                getComplete                                <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                            </div>
+
+                            <!-- Create panel body -->
+                            <div id="hidden" class="panel-body" style="max-height: 500px; overflow-y: scroll;">
+                                <!-- Displaying title -->
+                                <h3> Get Academic Year/s With Periods </h3> <br>
+
+                                <!-- Displaying description -->
+                                <p> </p><p>Get an academic year with periods, or get all academic years with periods. If a uuid is not specified, all academic years with periods are returned.</p> <p></p> <br>
+
+                                <!-- Displaying GET or POST -->
+                                                                    <div class="type-get"> GET </div>
+                                 <br>
+
+                                <!-- Displaying url on github for method -->
+                                <div class="black-bac" style="padding-left: 8px;"> https://api.github.com/academicyear/getComplete </div> <br>
+
+                                <!-- Adding parameter tables -->
+                                                                    <strong>Parameter</strong>                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Field</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>uuid                                                    </td>
+                                                    <td>Uuid</td>
+                                                    <td><p>Academic year uuid</p></td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                <!-- Displaying examples of method if found -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> PHP : Example usage: </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre> Example </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- Displaying success output -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> Success-Response: JSON </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre style="background-color: #0A1A1A; color: green;"> HTTP/1.1 200 OK
+ {
+     "status": "ok",
+     "response": [
+         {
+             "uuid": "CC99021720075A433F74FF96A02970047F12267C03AE56EF",
+             "name": "2014/2015",
+             "start": "1409526000",
+             "end": "1441580399",
+             "created_on": "1453903001",
+             "created_by": null,
+             "judgement_count": "0",
+             "periods": [
+                 {
+                     "uuid": "CC99071D200A9E98D0FADFFBA48EED02ADD0FF6CF3CF4E07",
+                     "name": "Autumn 1",
+                     "start": "1409526000",
+                     "end": "1414972799",
+                     "created_on": "1453903001",
+                     "created_by": null,
+                     "academic_year_uuid": "CC99021720075A433F74FF96A02970047F12267C03AE56EF",
+                     "judgement_count": "0"
+                 },
+                 {
+                     "uuid": "CC990AE4200A98FB39FDDFA86469F20E54BC6D3C04EBFD4E",
+                     "name": "Autumn 2",
+                     "start": "1414972800",
+                     "end": "1420415999",
+                     "created_on": "1453903001",
+                     "created_by": null,
+                     "academic_year_uuid": "CC99021720075A433F74FF96A02970047F12267C03AE56EF",
+                     "judgement_count": "0"
+                 },
+                 {
+                     "uuid": "CC990B52200A971C14165F45BDEDD906F299EC3CB6AA52AF",
+                     "name": "Spring 1",
+                     "start": "1420416000",
+                     "end": "1424649599",
+                     "created_on": "1453903001",
+                     "created_by": null,
+                     "academic_year_uuid": "CC99021720075A433F74FF96A02970047F12267C03AE56EF",
+                     "judgement_count": "0"
+                 },
+                 {
+                     "uuid": "CC990BBE200A9778B7A51FC3D56BE305080B420CE908428B",
+                     "name": "Spring 2",
+                     "start": "1424649600",
+                     "end": "1428879599",
+                     "created_on": "1453903001",
+                     "created_by": null,
+                     "academic_year_uuid": "CC99021720075A433F74FF96A02970047F12267C03AE56EF",
+                     "judgement_count": "0"
+                 },
+                 {
+                     "uuid": "CC990C2A200A9E7C866AAFE48A2F3F02E287FB2C7F9401EB",
+                     "name": "Summer 1",
+                     "start": "1428879600",
+                     "end": "1433113199",
+                     "created_on": "1453903001",
+                     "created_by": null,
+                     "academic_year_uuid": "CC99021720075A433F74FF96A02970047F12267C03AE56EF",
+                     "judgement_count": "0"
+                 },
+                 {
+                     "uuid": "CC990C95200A9ABBB191CFD17246920B2695C3ACF7815738",
+                     "name": "Summer 2",
+                     "start": "1433113200",
+                     "end": "1441580399",
+                     "created_on": "1453903001",
+                     "created_by": null,
+                     "academic_year_uuid": "CC99021720075A433F74FF96A02970047F12267C03AE56EF",
+                     "judgement_count": "0"
+                 }
+             ]
+         }
+ } </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- Displaying error output -->
+                                                            </div>
+                        </div>
+                                            <!-- Create method panel -->
+                        <div class="panel panel-default">
+                            <!-- Create panel heading -->
+                            <div class="panel-heading">
+                                update                                <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                            </div>
+
+                            <!-- Create panel body -->
+                            <div id="hidden" class="panel-body" style="max-height: 500px; overflow-y: scroll;">
+                                <!-- Displaying title -->
+                                <h3> Modify Academic Records </h3> <br>
+
+                                <!-- Displaying description -->
+                                <p> </p><p>Create, modify, or delete an academic year record. Either the created, modified, or deleted array must be specified.</p> <p></p> <br>
+
+                                <!-- Displaying GET or POST -->
+                                                                    <div class="type-post"> POST </div>
+                                 <br>
+
+                                <!-- Displaying url on github for method -->
+                                <div class="black-bac" style="padding-left: 8px;"> https://api.github.com/academicyear/update </div> <br>
+
+                                <!-- Adding parameter tables -->
+                                                                    <strong>Parameter</strong>                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Field</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>created                                                    </td>
+                                                    <td>String[]</td>
+                                                    <td><p>Array containing 'name', 'start' and 'end' within individual index. (eg created[year_1]['name'] = "year name";)</p></td>
+                                                </tr>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>modified                                                    </td>
+                                                    <td>String[]</td>
+                                                    <td><p>Array containing 'uuid', name', 'start' and 'end' within individual index. (eg modified[year_1][uuid] = a61e16eec5b111e59912ba0be0483c18;)</p></td>
+                                                </tr>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>deleted                                                    </td>
+                                                    <td>String[]</td>
+                                                    <td><p>Array containing 'uuid' within individual index. (eg deleted[year_1][uuid] = a61e16eec5b111e59912ba0be0483c18;)</p></td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                <!-- Displaying examples of method if found -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> PHP : Example usage: </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre> Example </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- Displaying success output -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> Success-Response: JSON </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre style="background-color: #0A1A1A; color: green;"> HTTP/1.1 200 OK
+ {
+     "status": "ok",
+     "response": []
+ } </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- Displaying error output -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> Error-Response: JSON </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre style="background-color: #0A1A1A; color: green;"> HTTP/1.1 400 Missing Parameter
+ {
+     "status": "error",
+     "response": {
+         "message": "Missing parameters: name, start, end",
+         "code": "invalid-param",
+         "http": 400
+ } </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                </div>
+                        </div>
+                                            <!-- Create method panel -->
+                        <div class="panel panel-default">
+                            <!-- Create panel heading -->
+                            <div class="panel-heading">
+                                updateComplete                                <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
+                            </div>
+
+                            <!-- Create panel body -->
+                            <div id="hidden" class="panel-body" style="max-height: 500px; overflow-y: scroll;">
+                                <!-- Displaying title -->
+                                <h3> Modify Academic Records &amp; Periods </h3> <br>
+
+                                <!-- Displaying description -->
+                                <p> </p><p>Create, modify, or delete an academic year with periods. Either created, modified, or deleted array must be specified. if 'type' equals 'period', it's linked academic year will be changed.</p> <p></p> <br>
+
+                                <!-- Displaying GET or POST -->
+                                                                    <div class="type-post"> POST </div>
+                                 <br>
+
+                                <!-- Displaying url on github for method -->
+                                <div class="black-bac" style="padding-left: 8px;"> https://api.github.com/academicyear/updateComplete </div> <br>
+
+                                <!-- Adding parameter tables -->
+                                                                    <strong>Using 'created' array parameter</strong>                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Field</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>created                                                    </td>
+                                                    <td>String[]</td>
+                                                    <td><p>Array containing 'name', 'start' and 'end' within individual index. (eg. created[year_1]['name'] = "year name";)</p></td>
+                                                </tr>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>periods                                                    </td>
+                                                    <td>String[]</td>
+                                                    <td><p>Array within "created" array, containing 'name', 'start' and 'end' within individual index. (eg. created[year_1][periods][period_1][name] = term_name)</p></td>
+                                                </tr>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>type                                                    </td>
+                                                    <td>String</td>
+                                                    <td><p>cycle or period. Cycle creates new year with specified periods. Period creates specified periods within an academic year specified by uuid in 'academic_year_uuid'. (eg. created[year_1][type] = "cycle")</p></td>
+                                                </tr>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>academic_year_uuid                                                    </td>
+                                                    <td>Uuid</td>
+                                                    <td><p>Only enter if 'type' equals period. (eg. created[year_1][academic_year_uuid] = a61e16eec5b111e59912ba0be0483c18;)</p></td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+                                                                    <strong>Using 'modified' array parameter</strong>                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Field</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>modified                                                    </td>
+                                                    <td>String[]</td>
+                                                    <td><p>Array containing 'name', 'start' and 'end' within individual index. (eg. modified[year_1]['name'] = "year name";)</p></td>
+                                                </tr>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>periods                                                    </td>
+                                                    <td>String[]</td>
+                                                    <td><p>Array within "modified" array, containing 'name', 'start' and 'end' within individual index. (eg. modified[year_1][periods][period_1][name] = term_name)</p></td>
+                                                </tr>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>type                                                    </td>
+                                                    <td>String</td>
+                                                    <td><p>cycle or period. Cycle edits year. Period edits periods specified by uuid in 'uuid'. (eg. modified[year_1][type] = "cycle")</p></td>
+                                                </tr>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>uuid                                                    </td>
+                                                    <td>Uuid</td>
+                                                    <td><p>period uuid if type equals period, academic year uuid otherwise (eg. modified[year_1][uuid] = a61e16eec5b111e59912ba0be0483c18;)</p></td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+                                                                    <strong>Using 'deleted' array parameter</strong>                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Field</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>deleted                                                    </td>
+                                                    <td>String[]</td>
+                                                    <td><p>Array containing next two parameters.</p></td>
+                                                </tr>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>uuid                                                    </td>
+                                                    <td>Uuid</td>
+                                                    <td><p>period uuid if type equals period, academic year uuid otherwise (eg. modified[year_1][uuid] = a61e16eec5b111e59912ba0be0483c18;)</p></td>
+                                                </tr>
+                                                                                                <tr>
+                                                    <td>
+                                                        <strong>Optional: </strong>type                                                    </td>
+                                                    <td>String</td>
+                                                    <td><p>cycle or period. Cycle deletes academic year and all periods. Period deleted a single period.</p></td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                <!-- Displaying examples of method if found -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> PHP : Example usage: </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre> Example </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- Displaying success output -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> Success-Response: JSON </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre style="background-color: #0A1A1A; color: green;"> HTTP/1.1 200 OK
+ {
+     "status": "ok",
+     "response": []
+ } </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- Displaying error output -->
+                                                                    <div class="panel panel-default">
+                                        <div class="panel-heading"> Error-Response: JSON </div>
+                                        <div class="panel-body">
+                                            <div class="black-bac">
+                                                <pre style="background-color: #0A1A1A; color: green;"> HTTP/1.1 400 Missing Parameter
+ {
+     "status": "error",
+     "response": {
+         "message": "Missing parameters: name, start, end",
+         "code": "invalid-param",
+         "http": 400
+ } </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                </div>
+                        </div>
+                                </div>
+        </div>
+
+
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        $('.panel-heading span.clickable').on("click", function (e) {
+            if ($(this).hasClass('panel-collapsed')) {
+                // expand the panel
+                $(this).parents('.panel').find('#hidden.panel-body').slideDown();
+                $(this).removeClass('panel-collapsed');
+                $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top
+                }, 600);
+            }
+            else {
+                // collapse the panel
+                $(this).parents('.panel').find('#hidden.panel-body').slideUp();
+                $(this).addClass('panel-collapsed');
+                $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+            }
+        });
+    });
+</script></body></html>
